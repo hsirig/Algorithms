@@ -25,20 +25,20 @@ int main()
 	printf("\nThe common elements are as follows:");
 	while((i < lenArrayOne) && (j < lenArrayTwo) && (k < lenArrayThree))
 	{
-		if(inputArrayOne[i] < inputArrayTwo[j])
+		if((inputArrayOne[i] == inputArrayTwo[j]) && (inputArrayTwo[j] == inputArrayThree[k]))
+		{
+			printf("\t%d", inputArrayOne[i]);
+			i++;
+			j++;
+			k++;
+		}
+		else if(inputArrayOne[i] < inputArrayTwo[j])
 		{
 			i++;
 		}
 		else if(inputArrayTwo[j] < inputArrayThree[k])
 		{
 			j++;
-		}
-		else if((inputArrayOne[i] == inputArrayTwo[j]) && (inputArrayTwo[j] == inputArrayThree[k]))
-		{
-			printf("\t%d", inputArrayOne[i]);
-			i++;
-			j++;
-			k++;
 		}
 		else
 		{
